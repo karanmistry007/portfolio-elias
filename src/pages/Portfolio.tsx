@@ -1,25 +1,40 @@
-import Home from './Home'
-// import About from './About'
-// import Resume from './Resume'
-// import Skills from './Skills'
-// import Projects from './Projects'
-// import Contact from './Contact'
-import Navbar from '../components/ui/Navbar'
+import Navbar from '../components/ui/Navbar';
+import About from './About';
+import Home from './Home';
+// import Contact from './Contact';
+// import Projects from './Projects';
+// import Resume from './Resume';
+// import Skills from './Skills';
 
+// ? MAIN COMPONENT
 const Portfolio = () => {
+    // ? RENDER
     return (
         <>
             <div className="portfolio">
+                {/* // ? NAVIGATION */}
                 <Navbar />
+
+                {/* // ? HOME SECTION */}
                 <Home />
-                {/* <About />
-                <Resume />
-                <Skills />
-                <Projects />
-                <Contact /> */}
+
+                {/* // ? ABOUT SECTION */}
+                <About />
+
+                {/* // ? RESUME SECTION */}
+                {/* <Resume /> */}
+
+                {/* // ? SKILLS SECTION */}
+                {/* <Skills /> */}
+
+                {/* // ? PROJECTS SECTION */}
+                {/* <Projects /> */}
+
+                {/* // ? CONTACT SECTION */}
+                {/* <Contact /> */}
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Portfolio
+export default Portfolio;
