@@ -6,6 +6,8 @@ import NutanSchoolLogo from '../assets/nutan_school.jpg';
 import SanskarLogo from '../assets/sanskartechnolab.jpg';
 import SoftCodingLogo from '../assets/softcoding.jpg';
 import UnnatiLogo from '../assets/unnatiinformatics.jpg';
+import SectionH1 from '../components/ui/SectionH1';
+import SectionH2 from '../components/ui/SectionH2';
 
 // ? EDUCATION DATA
 const EDUCATION_DATA = [
@@ -173,24 +175,18 @@ const Resume = () => {
             <div className="container-1">
                 <div className="resume-container py-8 md:py-12 lg:py-16 relative">
                     {/* // ? RESUME HEADING */}
-                    <div className="resume-heading mb-6 flex gap-2 items-center">
-                        <h2 className="text-white text-2xl md:text-3xl font-bold">
-                            <span className="text-[#C778DD]">#</span>Resume
-                        </h2>
-                        <div className="purple-line w-full h-px bg-[#C778DD]"></div>
-                    </div>
+                    <SectionH1
+                        message='Resume'
+                    />
 
                     {/* // ? RESUME CONTENT */}
                     <div className="resume flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 justify-between items-start text-[#ABB2BF]">
                         {/* // ? EDUCATION SECTION */}
                         <div className="education-container lg:w-1/2">
                             {/* // ? EDUCATION HEADING */}
-                            <div className="education-heading mb-6 flex gap-2 items-center">
-                                <h2 className="text-white text-2xl md:text-3xl font-bold">
-                                    <span className="text-[#C778DD]">##</span>Education
-                                </h2>
-                                <div className="purple-line w-full h-px bg-[#C778DD]"></div>
-                            </div>
+                            <SectionH2
+                                message='Education'
+                            />
 
                             {/* // ? EDUCATION CARDS */}
                             <div className="education-card-container flex flex-col gap-6">
@@ -221,12 +217,9 @@ const Resume = () => {
                         {/* // ? EXPERIENCE SECTION */}
                         <div className="experience-container lg:w-1/2">
                             {/* // ? EXPERIENCE HEADING */}
-                            <div className="experience-heading mb-6 flex gap-2 items-center">
-                                <h2 className="text-white text-2xl md:text-3xl font-bold">
-                                    <span className="text-[#C778DD]">##</span>Experience
-                                </h2>
-                                <div className="purple-line w-full h-px bg-[#C778DD]"></div>
-                            </div>
+                            <SectionH2
+                                message='Experience'
+                            />
 
                             {/* // ? EXPERIENCE CARDS */}
                             <div className="experience-card-container flex flex-col gap-6">

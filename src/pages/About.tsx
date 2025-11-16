@@ -1,5 +1,6 @@
 import AboutImage from '../assets/about_image.png';
 import Button from '../components/ui/Button';
+import SectionH1 from '../components/ui/SectionH1';
 
 // ? MAIN COMPONENT
 const About = () => {
@@ -12,12 +13,9 @@ const About = () => {
                         {/* // ? ABOUT CONTENT */}
                         <div className="about-content">
                             {/* // ? ABOUT HEADING */}
-                            <div className="about-heading mb-6 flex gap-2 items-center">
-                                <h2 className="text-white text-2xl md:text-3xl font-bold">
-                                    <span className="text-[#C778DD]">#</span>About
-                                </h2>
-                                <div className="purple-line w-full h-px bg-[#C778DD]"></div>
-                            </div>
+                            <SectionH1
+                                message='About'
+                            />
 
                             {/* // ? ABOUT TEXT */}
                             <div className="about-text text-[#ABB2BF] lg:max-w-[400px]">
