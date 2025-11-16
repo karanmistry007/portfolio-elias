@@ -7,15 +7,13 @@ const About = () => {
     // ? RENDER
     return (
         <>
-            <div className="container-1">
+            <div className="container-1" id="about">
                 <div className="about-container py-8 md:py-12 lg:py-16">
                     <div className="about flex flex-col lg:flex-row gap-12 lg:gap-24 justify-between items-center relative">
                         {/* // ? ABOUT CONTENT */}
                         <div className="about-content">
                             {/* // ? ABOUT HEADING */}
-                            <SectionH1
-                                message='About'
-                            />
+                            <SectionH1 message="About" />
 
                             {/* // ? ABOUT TEXT */}
                             <div className="about-text text-[#ABB2BF] lg:max-w-[400px]">
@@ -48,8 +46,8 @@ const About = () => {
                             <img src={AboutImage} alt="Karan Mistry" className="w-full" />
                         </div>
 
-                        {/* // ? DECORATIVE SQUARE */}
-                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-y-1/2 right-[calc(100%+140px)]"></div>
+                        {/* // TODO DECORATIVE SQUARE */}
+                        {/* <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-y-1/2 right-[calc(100%+140px)]"></div> */}
                     </div>
                 </div>
             </div>

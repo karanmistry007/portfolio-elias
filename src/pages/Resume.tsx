@@ -1,13 +1,13 @@
 import Button from '../components/ui/Button';
 import EducationCard from '../components/layouts/EducationCard';
 import ExperienceCard from '../components/layouts/ExperienceCard';
+import SectionH1 from '../components/ui/SectionH1';
+import SectionH2 from '../components/ui/SectionH2';
 import LJLogo from '../assets/lj.jpg';
 import NutanSchoolLogo from '../assets/nutan_school.jpg';
 import SanskarLogo from '../assets/sanskartechnolab.jpg';
 import SoftCodingLogo from '../assets/softcoding.jpg';
 import UnnatiLogo from '../assets/unnatiinformatics.jpg';
-import SectionH1 from '../components/ui/SectionH1';
-import SectionH2 from '../components/ui/SectionH2';
 
 // ? EDUCATION DATA
 const EDUCATION_DATA = [
@@ -172,21 +172,17 @@ const Resume = () => {
     // ? RENDER
     return (
         <>
-            <div className="container-1">
+            <div className="container-1" id="resume">
                 <div className="resume-container py-8 md:py-12 lg:py-16 relative">
                     {/* // ? RESUME HEADING */}
-                    <SectionH1
-                        message='Resume'
-                    />
+                    <SectionH1 message="Resume" />
 
                     {/* // ? RESUME CONTENT */}
                     <div className="resume flex flex-col-reverse lg:flex-row gap-10 lg:gap-16 justify-between items-start text-[#ABB2BF]">
                         {/* // ? EDUCATION SECTION */}
                         <div className="education-container lg:w-1/2">
                             {/* // ? EDUCATION HEADING */}
-                            <SectionH2
-                                message='Education'
-                            />
+                            <SectionH2 message="Education" />
 
                             {/* // ? EDUCATION CARDS */}
                             <div className="education-card-container flex flex-col gap-6">
@@ -217,9 +213,7 @@ const Resume = () => {
                         {/* // ? EXPERIENCE SECTION */}
                         <div className="experience-container lg:w-1/2">
                             {/* // ? EXPERIENCE HEADING */}
-                            <SectionH2
-                                message='Experience'
-                            />
+                            <SectionH2 message="Experience" />
 
                             {/* // ? EXPERIENCE CARDS */}
                             <div className="experience-card-container flex flex-col gap-6">
@@ -238,8 +232,8 @@ const Resume = () => {
                             </div>
                         </div>
 
-                        {/* // ? DECORATIVE SQUARE */}
-                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-y-1/2 left-[calc(100dvw-280px)]"></div>
+                        {/* //  DECORATIVE SQUARE */}
+                        {/* <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-y-1/2 left-[calc(100dvw-280px)]"></div> */}
                     </div>
                 </div>
             </div>

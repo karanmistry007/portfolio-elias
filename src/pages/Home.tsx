@@ -7,7 +7,7 @@ const Home = () => {
     // ? RENDER
     return (
         <>
-            <div className="container-1">
+            <div className="container-1" id="home">
                 {/* // ? BANNER SECTION */}
                 <div className="banner-container mt-8 lg:mt-20 py-8 md:py-12 lg:py-16">
                     <div className="banner flex flex-col lg:flex-row justify-between items-center gap-4">
@@ -56,7 +56,10 @@ const Home = () => {
                     <div className="quote w-fit m-auto">
                         {/* // ? QUOTE TEXT */}
                         <div className="quote-text text-xl lg:text-2xl p-4 lg:p-8 font-medium border border-[#ABB2BF] w-fit ml-auto relative">
-                            <p>Full stack, full control: crafting enterprise-grade solutions with Frappe and ERPNext.</p>
+                            <p>
+                                Full stack, full control: crafting enterprise-grade solutions
+                                with Frappe and ERPNext.
+                            </p>
 
                             {/* // ? QUOTE ICON TOP LEFT */}
                             <div className="h-6 lg:h-8 w-6 lg:w-8 absolute -top-3.5 lg:-top-4 left-2 lg:left-3 bg-[#282C33] flex p-0.5 justify-center items-center">
@@ -74,8 +77,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* // ? DECORATIVE SQUARE */}
-                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-20 w-20 absolute top-1/2 -translate-y-1/2 left-[calc(100dvw-280px)]"></div>
+                        {/* // TODO DECORATIVE SQUARE */}
+                        {/* <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-20 w-20 absolute top-1/2 -translate-y-1/2 left-[calc(100dvw-280px)]"></div> */}
                     </div>
                 </div>
             </div>

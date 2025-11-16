@@ -40,7 +40,7 @@ const Skills = () => {
     // ? RENDER
     return (
         <>
-            <div className="container-1">
+            <div className="container-1" id="skills">
                 <div className="skills-container py-8 md:py-12 lg:py-16 relative">
                     <div className="skills flex flex-col lg:flex-row gap-12 justify-between items-start">
                         {/* // ? SKILLS IMAGE SECTION */}
