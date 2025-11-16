@@ -50,17 +50,17 @@ const SOCIAL_LINKS: {
 }[] = [
         {
             name: 'GitHub',
-            link: 'https://github.com/yourusername',
+            link: 'https://github.com/karanmistry007',
             icon: <FaGithub size={30} />,
         },
         {
             name: 'LinkedIn',
-            link: 'https://linkedin.com/in/yourusername',
+            link: 'https://www.linkedin.com/in/karan-mistry-506a83238/',
             icon: <IoLogoLinkedin size={30} />,
         },
         {
             name: 'Instagram',
-            link: 'https://instagram.com/yourusername',
+            link: 'https://instagram.com/karan._.mistry',
             icon: <FaInstagram size={30} />,
         },
     ];
