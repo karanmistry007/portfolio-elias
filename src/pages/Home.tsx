@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <div className="container-1">
                 {/* // ? BANNER SECTION */}
-                <div className="banner-container py-8 md:py-12 lg:py-16">
+                <div className="banner-container mt-8 lg:mt-20 py-8 md:py-12 lg:py-16">
                     <div className="banner flex flex-col lg:flex-row justify-between items-center gap-4">
                         {/* // ? BANNER TEXT CONTENT */}
                         <div className="banner-text-container">
