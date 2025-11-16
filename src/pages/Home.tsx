@@ -56,7 +56,7 @@ const Home = () => {
                     <div className="quote w-fit m-auto">
                         {/* // ? QUOTE TEXT */}
                         <div className="quote-text text-xl lg:text-2xl p-4 lg:p-8 font-medium border border-[#ABB2BF] w-fit ml-auto relative">
-                            <p>With great power comes great electricity bill</p>
+                            <p>Full stack, full control: crafting enterprise-grade solutions with Frappe and ERPNext.</p>
 
                             {/* // ? QUOTE ICON TOP LEFT */}
                             <div className="h-6 lg:h-8 w-6 lg:w-8 absolute -top-3.5 lg:-top-4 left-2 lg:left-3 bg-[#282C33] flex p-0.5 justify-center items-center">
