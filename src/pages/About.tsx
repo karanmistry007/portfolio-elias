@@ -36,7 +36,7 @@ const About = () => {
                                     technologies and frameworks to deliver outstanding results.
                                 </p>
 
-                                {/* // ? CTA BUTTON */}
+                                {/* // ? READ MORE BUTTON */}
                                 <Button
                                     text="Read More ->"
                                     variant="outline"

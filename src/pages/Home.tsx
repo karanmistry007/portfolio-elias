@@ -26,7 +26,7 @@ const Home = () => {
                                 </p>
                             </div>
 
-                            {/* // ? CTA BUTTON */}
+                            {/* // ? CONTACT BUTTON */}
                             <Button
                                 text="Contact me!!"
                                 variant="outline"

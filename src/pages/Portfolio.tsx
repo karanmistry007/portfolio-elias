@@ -1,9 +1,9 @@
 import Navbar from '../components/ui/Navbar';
-import About from './About';
 import Home from './Home';
+import About from './About';
+import Resume from './Resume';
 // import Contact from './Contact';
 // import Projects from './Projects';
-// import Resume from './Resume';
 // import Skills from './Skills';
 
 // ? MAIN COMPONENT
@@ -22,7 +22,7 @@ const Portfolio = () => {
                 <About />
 
                 {/* // ? RESUME SECTION */}
-                {/* <Resume /> */}
+                <Resume />
 
                 {/* // ? SKILLS SECTION */}
                 {/* <Skills /> */}
