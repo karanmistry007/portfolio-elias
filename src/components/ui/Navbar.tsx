@@ -118,7 +118,7 @@ const Navbar = () => {
                     {/* // ? NAVIGATION LINKS */}
                     <div
                         className={`${isNavbarOpen ? 'block' : 'hidden'
-                            } lg:block nav-links text-4xl lg:text-[16px]`}
+                            } lg:block nav-links text-4xl lg:text-[16px] flex flex-col gap-8`}
                     >
                         <ul className="flex flex-col lg:flex-row gap-9 lg:items-center">
                             {NAV_LINKS.map((data, index) => (
@@ -136,8 +136,8 @@ const Navbar = () => {
                         </ul>
 
                         {/* // ? SOCIAL LINKS */}
-                        <div className="social-links-container lg:fixed left-0 top-[50%] transform -translate-y-1/2 lg:px-4">
-                            <div className="social-links flex flex-row lg:flex-col gap-4 mt-8 lg:mt-4 justify-center items-center">
+                        <div className="social-links-container lg:fixed lg:left-0 lg:top-[50%] lg:transform lg:-translate-y-1/2 lg:px-4">
+                            <div className="social-links flex flex-row lg:flex-col gap-4 justify-center items-center">
                                 {SOCIAL_LINKS.map((social, index) => (
                                     <a
                                         key={index}
