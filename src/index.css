@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+body {
+  background-color: #282C33;
+  color: #ffffff;
+  font-family: "Fira Code", monospace;
+  overflow-x: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container-1 {
+  width: 100%;
+  max-width: 1336px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .container-1 {
+    max-width: 610px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-1 {
+    max-width: 728px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-1 {
+    max-width: 920px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-1 {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-1 {
+    max-width: 1150px;
+  }
+}
