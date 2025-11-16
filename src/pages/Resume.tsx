@@ -171,7 +171,7 @@ const Resume = () => {
     return (
         <>
             <div className="container-1">
-                <div className="resume-container py-8 md:py-12 lg:py-16">
+                <div className="resume-container py-8 md:py-12 lg:py-16 relative">
                     {/* // ? RESUME HEADING */}
                     <div className="resume-heading mb-6 flex gap-2 items-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold">
@@ -244,6 +244,9 @@ const Resume = () => {
                                 ))}
                             </div>
                         </div>
+
+                        {/* // ? DECORATIVE SQUARE */}
+                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-y-1/2 left-[calc(100dvw-280px)]"></div>
                     </div>
                 </div>
             </div>

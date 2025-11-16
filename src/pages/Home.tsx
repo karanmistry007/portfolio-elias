@@ -75,7 +75,7 @@ const Home = () => {
                         </div>
 
                         {/* // ? DECORATIVE SQUARE */}
-                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-20 w-20 absolute top-1/2 -translate-x-1/2 left-[calc(100%+180px)]"></div>
+                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-20 w-20 absolute top-1/2 -translate-y-1/2 left-[calc(100dvw-280px)]"></div>
                     </div>
                 </div>
             </div>

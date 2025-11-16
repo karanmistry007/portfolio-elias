@@ -51,7 +51,7 @@ const About = () => {
                         </div>
 
                         {/* // ? DECORATIVE SQUARE */}
-                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-x-1/2 right-[calc(100%+80px)]"></div>
+                        <div className="quote-side-square hidden lg:block border border-[#ABB2BF] h-32 w-32 absolute top-1/2 -translate-y-1/2 right-[calc(100%+140px)]"></div>
                     </div>
                 </div>
             </div>
