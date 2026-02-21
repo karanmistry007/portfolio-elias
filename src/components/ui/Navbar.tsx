@@ -124,7 +124,7 @@ const Navbar: React.FC<NavbarProps> = ({
                             : 'scale-y-0 opacity-0 pointer-events-none lg:pointer-events-auto h-0 lg:h-auto lg:overflow-visible overflow-hidden'
                             } nav-links text-4xl lg:text-[16px] flex-col gap-8 justify-center items-center lg:items-start`}
                     >
-                        <ul className="flex flex-col lg:flex-row gap-9 lg:items-center">
+                        <ul className={`flex flex-col lg:flex-row gap-9 lg:items-center ${isNavbarOpen && 'container-1'}`}>
                             {navLinks.map((data, index) => (
                                 <li
                                     key={index}
@@ -158,7 +158,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 };
 
