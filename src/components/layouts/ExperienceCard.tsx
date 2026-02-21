@@ -1,17 +1,6 @@
-import React from 'react';
+import type { ExperienceCardProps } from '../../types';
 
-// ? TYPES
-interface ExperienceCardProps {
-    icon: React.ReactNode;
-    year: string;
-    image: string;
-    position: string;
-    link?: string;
-    company: string;
-    description: string;
-}
-
-// ? MAIN COMPONENT
+// ─── Component ───────────────────────────────────────────────────────
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
     icon,
     year,
@@ -21,26 +10,15 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     company,
     description,
 }) => {
-    // ? RENDER
     return (
         <div className="experience-card flex gap-4 items-start justify-center">
-            {/* // ? EXPERIENCE ICON */}
             <div className="experience-svg">{icon}</div>
 
-            {/* // ? EXPERIENCE CONTENT */}
             <div className="experience-item-content flex flex-col gap-1 items-start">
-                {/* // ? YEAR */}
                 <h6 className="year text-white font-semibold">{year}</h6>
-
-                {/* // ? POSITION */}
-                <h3 className="heading text-xl text-[#C778DD] font-bold">
-                    {position}
-                </h3>
-
-                {/* // ? COMPANY */}
+                <h3 className="heading text-xl text-[#C778DD] font-bold">{position}</h3>
                 <h4 className="sub-heading text-white font-medium">{company}</h4>
 
-                {/* // ? COMPANY LOGO */}
                 {image && (
                     <a href={link} target="_blank" rel="noreferrer" title={company}>
                         <img
@@ -51,7 +29,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
                     </a>
                 )}
 
-                {/* // ? DESCRIPTION */}
                 <p className="content text-sm text-[#ABB2BF]">{description}</p>
             </div>
         </div>

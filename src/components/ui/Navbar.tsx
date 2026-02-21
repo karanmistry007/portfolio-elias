@@ -1,57 +1,38 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../../assets/logo.svg';
 
-// ? TYPES
-interface NavbarProps {
-    logoText: string;
-    navLinks: {
-        name: string;
-        link: string;
-        active: boolean;
-    }[];
-    socialLinks: {
-        name: string;
-        link: string;
-        icon: React.ReactNode;
-    }[];
-    activeSection: string;
-}
+import type { NavbarProps } from '../../types';
+import Logo from '../../assets/icons/logo.svg';
 
-// ? MAIN COMPONENT
+// ─── Component ───────────────────────────────────────────────────────
 const Navbar: React.FC<NavbarProps> = ({
     logoText,
     navLinks,
     socialLinks,
     activeSection,
 }) => {
-    // ? STATE MANAGEMENT
+    // ─── State ───────────────────────────────────────────────────────
     const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false);
     const [activeLink, setActiveLink] = useState<string>(activeSection);
 
-    // ? HOOKS
+    // ─── Hooks ───────────────────────────────────────────────────────
     const navigate = useNavigate();
-
-    // ? REFS
     const isScrollingToSectionRef = useRef<boolean>(false);
 
-    // ? EFFECTS
+    // ─── Effects ─────────────────────────────────────────────────────
     useEffect(() => {
         setActiveLink(activeSection);
     }, [activeSection]);
 
-    // ? SCROLL TO SECTION FUNCTION
+    // ─── Scroll To Section ───────────────────────────────────────────
     const scrollToSection = (sectionId: string): void => {
-        // ADJUST FOR HOME SECTION
         if (sectionId === '') sectionId = 'home';
 
         const element = document.getElementById(sectionId);
         if (element) {
             isScrollingToSectionRef.current = true;
 
-            // DETERMINE NAVBAR HEIGHT BASED ON SCREEN SIZE
             const navbarHeight = window.innerWidth >= 1024 ? 80 : 32;
-
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
@@ -60,14 +41,13 @@ const Navbar: React.FC<NavbarProps> = ({
                 behavior: 'smooth',
             });
 
-            // RESET FLAG AFTER SCROLL COMPLETES
             setTimeout(() => {
                 isScrollingToSectionRef.current = false;
             }, 1000);
         }
     };
 
-    // ? EVENT HANDLERS
+    // ─── Event Handlers ──────────────────────────────────────────────
     const handleNavLinkClick = (link: string): void => {
         navigate(`/${link}`);
         setActiveLink(link);
@@ -79,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({
         setIsNavbarOpen(!isNavbarOpen);
     };
 
-    // ? RENDER
+    // ─── Render ──────────────────────────────────────────────────────
     return (
         <nav
             className={`${isNavbarOpen ? 'h-dvh' : 'h-auto'
@@ -87,9 +67,8 @@ const Navbar: React.FC<NavbarProps> = ({
         >
             <div className="nav-container container-1">
                 <div className="nav py-4 lg:pt-8 lg:pb-2 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-12">
-                    {/* // ? LOGO AND HAMBURGER SECTION */}
+                    {/* Logo & Hamburger */}
                     <div className="nav-logo-container flex justify-between items-center lg:block">
-                        {/* // ? LOGO */}
                         <button
                             className="nav-logo flex gap-2 items-center cursor-pointer"
                             onClick={() => handleNavLinkClick('')}
@@ -102,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({
                             </div>
                         </button>
 
-                        {/* // ? HAMBURGER MENU */}
+                        {/* Hamburger Menu */}
                         <div className="hamburger-container">
                             <button
                                 className={`${isNavbarOpen ? 'relative' : ''
@@ -122,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({
                         </div>
                     </div>
 
-                    {/* // ? NAVIGATION LINKS */}
+                    {/* Navigation Links */}
                     <div
                         className={`${isNavbarOpen ? 'block' : 'hidden'
                             } lg:block nav-links text-4xl lg:text-[16px] flex flex-col gap-8`}
@@ -143,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = ({
                             ))}
                         </ul>
 
-                        {/* // ? SOCIAL LINKS */}
+                        {/* Social Links */}
                         <div className="social-links-container lg:fixed lg:left-0 lg:top-[50%] lg:transform lg:-translate-y-1/2 lg:px-4">
                             <div className="social-links flex flex-row lg:flex-col gap-4 justify-center items-center">
                                 {socialLinks.map((social, index) => (

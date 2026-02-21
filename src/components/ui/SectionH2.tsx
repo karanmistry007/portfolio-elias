@@ -1,11 +1,7 @@
-import React from 'react';
+import type { SectionHeadingProps } from '../../types';
 
-// ? TYPES
-interface SectionH1Props {
-    message: string;
-}
-
-const SectionH2: React.FC<SectionH1Props> = ({ message }) => {
+// ─── Component ───────────────────────────────────────────────────────
+const SectionH2: React.FC<SectionHeadingProps> = ({ message }) => {
     return (
         <div className="section-heading-h2 mb-5 flex gap-2 items-center">
             <h2 className="text-white text-xl md:text-2xl font-bold">
