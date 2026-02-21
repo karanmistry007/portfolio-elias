@@ -26,19 +26,13 @@ const About = () => {
                             className={`about-text text-[#ABB2BF] lg:max-w-[400px] ${contentAnim.isVisible ? 'animate-fade-in-left' : 'animate-hidden'
                                 }`}
                         >
-                            <p className="mb-6">Hello, I'm Karan Mistry!</p>
                             <p className="mb-6">
-                                I am a lead Full Stack Frappe and ERPNext developer based in
-                                Ahmedabad, India. I specialize in building scalable and
-                                responsive enterprise applications that blend innovative
-                                technology with practical business solutions.
+                                With almost 3 years of experience, I am currently a Technical Lead and Full Stack Frappe/ERPNext developer based in
+                                Ahmedabad, India. I specialize in large-scale ERP technical design, system architecture, and building SaaS products that solve complex business challenges.
                             </p>
                             <p className="mb-6">
-                                Turning complex business challenges into seamless,
-                                high-performance digital experiences has been my passion for
-                                several years. I have worked with diverse clients and teams,
-                                constantly striving to learn and implement the latest
-                                technologies and frameworks to deliver outstanding results.
+                                My expertise spans across multi-server architecture, multi-tenant hosting, and remote DB configuration.
+                                Beyond core development, I actively lead development teams, optimize scaling with bench production and Docker, and handle pre-sales demos to deliver enterprise-grade digital experiences.
                             </p>
 
                             <Button

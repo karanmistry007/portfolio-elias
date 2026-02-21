@@ -1,31 +1,34 @@
 import type { ProjectDetail } from '../types';
 
 import TradingManagementImage from '../assets/images/trading_management.jpg';
-import RealEstateCRMImage from '../assets/images/realestate_crm.jpg';
-import PharmacyHealthcareImage from '../assets/images/pharmacy_healthcare.jpg';
-import ChartOfAccountsImage from '../assets/images/chart_of_accounts.jpg';
-import POSImage from '../assets/images/pos.jpg';
-import WhatsAppImage from '../assets/images/whatsapp.jpg';
+import RealEstateCRMImage from '../assets/images/real_estate.jpg';
+import PharmacyHealthcareImage from '../assets/images/pharmacy_erp.jpg';
+import MedicalHealthcareImage from '../assets/images/medical_telehealth.jpg';
+import InternalPMSImage from '../assets/images/internal_pms.jpg';
+import DairyTechERPImage from '../assets/images/dairy_tech.jpg';
+import ChartOfAccountsImage from '../assets/images/saas_deployment.jpg';
+import POSImage from '../assets/images/retail_pos.jpg';
+import WhatsAppImage from '../assets/images/whatsapp_integration.jpg';
 
 // ─── Project Details ─────────────────────────────────────────────────
 export const PROJECT_DETAILS: ProjectDetail[] = [
     {
-        image: TradingManagementImage,
-        title: 'Trading Management',
-        techStack: ['ERPNext', 'Frappe', 'Python', 'Astro.js', 'JavaScript', 'MariaDB'],
+        image: DairyTechERPImage,
+        title: 'Dairy Tech ERP',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs', 'Mobile API', 'Azure Blob', 'DB Replication'],
         description:
-            'End-to-end trading workflow solution covering buying, selling, stock movement, and financial tracking with customized ERPNext doctypes and automated operations.',
+            'Led enterprise architecture for a dairy tech ecosystem. Managed remote DB replication, Azure integration, and mobile APIs alongside automated contract and customer billing portals.',
     },
     {
-        image: RealEstateCRMImage,
-        title: 'Real Estate CRM',
-        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs'],
+        image: MedicalHealthcareImage,
+        title: 'Medical Telehealth SaaS',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'Express.js', 'PostgreSQL', 'RabbitMQ', 'Keycloak', 'FHIR'],
         description:
-            'Domain-specific CRM for real estate to manage leads, properties, bookings, and follow-ups with custom workflows and role-based dashboards.',
+            'Full-fledged telehealth SaaS with multi-server architecture. Used ERPNext core logic, Express.js/PostgreSQL backend for mobile, RabbitMQ middleware, and Keycloak. Features doctor-patient video scheduling, FHIR-compliant auto-prescriptions linked to pharmacy/labs, and insurance auto-billing.',
     },
     {
         image: PharmacyHealthcareImage,
-        title: 'Pharmacy Healthcare Suite',
+        title: 'Enterprise Pharmacy SaaS ERP',
         techStack: [
             'ERPNext',
             'Frappe',
@@ -40,21 +43,42 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
             'SOAP APIs',
         ],
         description:
-            'Healthcare and pharmacy solution for patient management, prescriptions, billing, and inventory with third-party REST/SOAP service integrations.',
-    },
-    {
-        image: ChartOfAccountsImage,
-        title: 'Chart Of Account Customization',
-        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB'],
-        description:
-            'Customized Chart of Accounts in ERPNext for multi-branch and industry-specific accounting with improved financial structure and automation.',
+            'Multi-tenant SaaS ERP for multi-facility healthcare networks. Engineered high-volume prescription handling, complex multi-branch billing, and synchronized legacy SOAP medical databases.',
     },
     {
         image: POSImage,
-        title: 'POS Customizations',
+        title: 'Healthcare POS & Retail ERP',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'Astro.js', 'JavaScript', 'MariaDB', 'PWA'],
+        description:
+            'Custom healthcare POS for retail and wholesale. Added live inventory/stock-taking, batch-wise barcodes, cashier expense management, and wholesale-wise ledgers. Features extreme keyboard optimization, extensive reporting, and a PWA delivery app.',
+    },
+    {
+        image: ChartOfAccountsImage,
+        title: 'Automated SaaS Deployment & CoA',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'Docker', 'Kubernetes'],
+        description:
+            'Created network REST APIs for HDM Cash machines and a Frappe Cloud-like multi-tenant SaaS auto-deployment system. Containerized apps with Frappe Docker and orchestrated deployments on Kubernetes clusters. Delivered a fully customized Tanzania chart of accounts.',
+    },
+    {
+        image: RealEstateCRMImage,
+        title: 'Multi-Tenant Real Estate SaaS',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs'],
+        description:
+            'Scalable, multi-tenant real estate CRM. Built high-concurrency server architecture handling complex property booking workflows, dynamic lead pipelines, and custom role-based dashboards.',
+    },
+    {
+        image: TradingManagementImage,
+        title: 'Trading Management',
         techStack: ['ERPNext', 'Frappe', 'Python', 'Astro.js', 'JavaScript', 'MariaDB'],
         description:
-            'Enhanced ERPNext POS for retail and pharma with tailored UI, discount logic, shortcut flows, and optimized offline performance.',
+            'End-to-end trading ERP covering lifecycle from buying to stock movement. Features real-time dashboards, custom doctypes, and seamless API integration with Astro.js frontends.',
+    },
+    {
+        image: InternalPMSImage,
+        title: 'Internal System (PMS & CRM)',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs'],
+        description:
+            'Comprehensive Frappe CRM and PMS implementation. Crafted custom lead workflows, resource allocation logic, and a real-time floating screen timer for multi-task timesheet tracking.',
     },
     {
         image: WhatsAppImage,
@@ -70,6 +94,6 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
             'REST APIs',
         ],
         description:
-            'Social and messaging integrations connecting ERPNext with WhatsApp, Facebook, and Instagram for automated notifications and lead capture.',
+            'Omnichannel social CRM hub connecting ERPNext to WhatsApp, Facebook, and Instagram. Automated lead capture, session messaging, and deep analytics tracking.',
     },
 ];

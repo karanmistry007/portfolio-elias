@@ -78,10 +78,6 @@ const ComingSoon = () => {
                 />
             </div>
 
-            {/* Bottom Code Comment */}
-            <div className="absolute bottom-6 text-[#ABB2BF]/30 text-xs">
-                {'<'}/{'>'} Built with Frappe & React
-            </div>
         </div>
     );
 };

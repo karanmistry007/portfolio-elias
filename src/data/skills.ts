@@ -7,25 +7,23 @@ export const SKILLS_DATA: SkillItem[] = [
         description: 'Python, JavaScript, Typescript, SQL, Jinja, HTML, CSS',
     },
     {
+        skill: 'Frameworks & Systems',
+        description: 'Frappe, ERPNext, Django, React.js, Astro.js, Next.js',
+    },
+    {
+        skill: 'Architecture & DevOps',
+        description: 'Docker, Bench Production, Multi-tenant, Multi-Server Architecture, Remote DB, Server Tuning',
+    },
+    {
         skill: 'Databases',
-        description: 'MariaDB, MySQL, PostgreSQL, SQLite',
+        description: 'MariaDB, PostgreSQL, MySQL, SQLite',
     },
     {
-        skill: 'Tools',
-        description: 'VS Code, Postman, Git, Linux, Docker, Windows, Nginx',
+        skill: 'Domain & Soft Skills',
+        description: 'Technical Leadership, Pre-Sales Demo, SaaS Products, System Design, Large-Scale ERP',
     },
     {
-        skill: 'Other',
-        description: 'REST, SOAP, Jinja, Bootstrap, TailwindCSS',
-    },
-    {
-        skill: 'Frameworks',
-        description:
-            'Frappe, ERPNext (App of Frappe), Django, React.js, Astro.js, Next.js',
-    },
-    {
-        skill: 'ERP Modules',
-        description:
-            'CRM, Sales, Marketing, PMS, POS, Healthcare, SaaS, Product Engineering',
+        skill: 'Tools & Integrations',
+        description: 'REST, SOAP, Git, Linux, Nginx, VS Code, Postman',
     },
 ];

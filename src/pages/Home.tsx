@@ -22,8 +22,8 @@ const Home = () => {
                         <div className="banner-text">
                             <h2 className="text-[32px] font-semibold mb-8 lg:max-w-[540px]">
                                 Karan Mistry is a{' '}
-                                <span className="text-[#C778DD]">Full Stack Frappe</span> and{' '}
-                                <span className="text-[#C778DD]">ERPNext Developer</span>
+                                <span className="text-[#C778DD]">Technical Lead</span> &{' '}
+                                <span className="text-[#C778DD]">ERPNext Expert</span>
                             </h2>
                             <p className="text-[#ABB2BF] mb-6 lg:max-w-[460px]">
                                 Building intelligent, scalable full-stack enterprise solutions

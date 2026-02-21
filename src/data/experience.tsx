@@ -86,10 +86,10 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
         ),
         year: '2023 November-Present',
         image: SanskarLogo,
-        position: 'Full-Stack Frappe Developer',
+        position: 'Technical Lead',
         link: 'https://sanskartechnolab.com/',
         company: 'Sanskar Technolab',
         description:
-            'Specializing in Frappe ERPNext, Astro.js, React.js, and Django frameworks. Lead a team of 10 professionals, developing REST and SOAP APIs, automating Docker workflows, and delivering robust ERPNext modules including CRM, Sales, PMS, Healthcare, Accounts, and Assets.',
+            'Leading a team of 10+ professionals while managing large-scale ERP technical design, deployment, and pre-sales demos for SaaS products. Specializing in Frappe/ERPNext architecture, advanced server fine-tuning, bench production, Docker, multi-tenant/multi-server setups, and remote DB hosting.',
     },
 ];

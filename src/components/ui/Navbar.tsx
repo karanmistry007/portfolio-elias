@@ -101,10 +101,28 @@ const Navbar: React.FC<NavbarProps> = ({
                         </div>
                     </div>
 
-                    {/* Navigation Links */}
+                    {/* Desktop Fixed Social Links */}
+                    <div className="hidden lg:flex fixed left-4 xl:left-8 top-1/2 -translate-y-1/2 z-50 flex-col gap-6 justify-center items-center">
+                        {socialLinks.map((social, index) => (
+                            <a
+                                key={index}
+                                href={social.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={social.name}
+                                className="text-[#ABB2BF] hover:text-[#C778DD] hover:translate-x-1 lg:hover:translate-x-1 transition-all duration-300"
+                            >
+                                {social.icon}
+                            </a>
+                        ))}
+                    </div>
+
+                    {/* Navigation Links Dropdown */}
                     <div
-                        className={`${isNavbarOpen ? 'block' : 'hidden'
-                            } lg:block nav-links text-4xl lg:text-[16px] flex flex-col gap-8`}
+                        className={`absolute lg:relative top-[72px] lg:top-0 left-0 w-full lg:w-auto bg-[#282C33] lg:bg-transparent transition-all duration-300 ease-in-out transform origin-top lg:transform-none lg:opacity-100 lg:scale-y-100 lg:flex ${isNavbarOpen
+                            ? 'scale-y-100 opacity-100 pointer-events-auto h-[calc(100vh-72px)] lg:h-auto z-40'
+                            : 'scale-y-0 opacity-0 pointer-events-none lg:pointer-events-auto h-0 lg:h-auto lg:overflow-visible overflow-hidden'
+                            } nav-links text-4xl lg:text-[16px] flex-col gap-8 justify-center items-center lg:items-start`}
                     >
                         <ul className="flex flex-col lg:flex-row gap-9 lg:items-center">
                             {navLinks.map((data, index) => (
@@ -122,22 +140,20 @@ const Navbar: React.FC<NavbarProps> = ({
                             ))}
                         </ul>
 
-                        {/* Social Links */}
-                        <div className="social-links-container lg:fixed lg:left-0 lg:top-[50%] lg:transform lg:-translate-y-1/2 lg:px-4">
-                            <div className="social-links flex flex-row lg:flex-col gap-4 justify-center items-center">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label={social.name}
-                                        className="text-[#ABB2BF] hover:text-white transition-colors duration-300"
-                                    >
-                                        {social.icon}
-                                    </a>
-                                ))}
-                            </div>
+                        {/* Mobile Social Links */}
+                        <div className="flex lg:hidden flex-row gap-6 justify-center items-center mt-4 pb-8">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={social.name}
+                                    className="text-[#ABB2BF] hover:text-[#C778DD] hover:-translate-y-1 transition-all duration-300"
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
