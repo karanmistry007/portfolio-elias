@@ -74,7 +74,7 @@ const ComingSoon = () => {
                 <Button
                     text="<- Go Back"
                     variant="outline"
-                    action={() => navigate(-1 as unknown as number)}
+                    onClick={() => navigate(-1 as unknown as number)}
                 />
             </div>
 

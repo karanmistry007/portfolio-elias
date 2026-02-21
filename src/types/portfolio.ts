@@ -58,7 +58,7 @@ export interface ExperienceItem {
 export interface ButtonProps {
   text: string;
   variant?: 'primary' | 'secondary' | 'outline';
-  action?: () => void;
+  onClick?: () => void;
 }
 
 export interface NavbarProps {

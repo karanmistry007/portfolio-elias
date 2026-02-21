@@ -13,12 +13,12 @@ const VARIANT_STYLES = {
 };
 
 // ─── Component ───────────────────────────────────────────────────────
-const Button: React.FC<ButtonProps> = ({ text, variant = 'outline', action }) => {
+const Button: React.FC<ButtonProps> = ({ text, variant = 'outline', onClick }) => {
     const navigate = useNavigate();
 
     const handleClick = (): void => {
-        if (action) {
-            action();
+        if (onClick) {
+            onClick();
         } else {
             navigate('/coming-soon');
         }

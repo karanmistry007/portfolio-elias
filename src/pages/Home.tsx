@@ -8,6 +8,20 @@ const Home = () => {
     const bannerAnim = useScrollAnimation({ threshold: 0.1 });
     const quoteAnim = useScrollAnimation({ threshold: 0.2 });
 
+    const scrollToSection = (sectionId: string): void => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const navbarHeight = window.innerWidth >= 1024 ? 80 : 32;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <div className="container-1" id="home">
             {/* Banner Section */}
@@ -35,6 +49,7 @@ const Home = () => {
                         <Button
                             text="Contact me!!"
                             variant="outline"
+                            onClick={() => scrollToSection('contact')}
                         />
                     </div>
 

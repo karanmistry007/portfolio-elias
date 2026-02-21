@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     {description}
                 </p>
                 <div className="project-action pt-1">
-                    <Button text="Live ->" action={handleButtonClick} />
+                    <Button text="Live ->" onClick={handleButtonClick} />
                 </div>
             </div>
         </div>
