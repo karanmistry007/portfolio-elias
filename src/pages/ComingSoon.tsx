@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks';
-import { Button } from '../components/ui';
+import { Button, Navbar } from '../components/ui';
+import { LOGO_TEXT, NAV_LINKS, SOCIAL_LINKS } from '../data';
 
 // ─── Component ───────────────────────────────────────────────────────
 const ComingSoon = () => {
@@ -8,7 +9,13 @@ const ComingSoon = () => {
     const contentAnim = useScrollAnimation({ threshold: 0.1 });
 
     return (
-        <div className="min-h-dvh bg-[#282C33] flex flex-col items-center justify-center px-4 relative overflow-hidden">
+        <div className="min-h-dvh bg-[#282C33] flex flex-col items-center justify-center px-4 relative overflow-hidden pt-20 lg:pt-32">
+            <Navbar
+                logoText={LOGO_TEXT}
+                navLinks={NAV_LINKS}
+                socialLinks={SOCIAL_LINKS}
+                activeSection=""
+            />
             {/* Decorative Elements */}
             <div className="absolute top-20 left-10 w-16 h-16 border border-[#ABB2BF] opacity-20 rotate-12"></div>
             <div className="absolute top-40 right-16 w-10 h-10 border border-[#C778DD] opacity-30 -rotate-6"></div>
