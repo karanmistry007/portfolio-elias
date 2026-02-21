@@ -1,4 +1,5 @@
 import BannerImage from '../assets/images/banner_image.png';
+import LogoBanner from '../assets/icons/logo-banner.svg';
 import QuoteImage from '../assets/icons/quote.svg';
 import { Button } from '../components/ui';
 import { useScrollAnimation } from '../hooks';
@@ -54,9 +55,15 @@ const Home = () => {
                     </div>
 
                     {/* Banner Image */}
-                    <div className="banner-image-container">
-                        <div className="banner-image">
-                            <img src={BannerImage} alt="Karan Mistry Banner" />
+                    <div className="banner-image-container relative">
+                        <div className="banner-image relative">
+                            <img src={BannerImage} alt="Karan Mistry Banner" className="relative z-10" />
+                            <img
+                                src={LogoBanner}
+                                alt=""
+                                className="absolute top-1/4 -left-10 w-32 h-32 opacity-80 z-0 animate-pulse"
+                                aria-hidden="true"
+                            />
                         </div>
 
                         {/* Current Work Status */}
