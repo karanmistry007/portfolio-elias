@@ -34,11 +34,11 @@ const Home = () => {
                     {/* Banner Text */}
                     <div className="banner-text-container">
                         <div className="banner-text">
-                            <h2 className="text-[32px] font-semibold mb-8 lg:max-w-[540px]">
+                            <h1 className="text-[32px] font-semibold mb-8 lg:max-w-[540px]">
                                 Karan Mistry is a{' '}
                                 <span className="text-[#C778DD]">Technical Lead</span> &{' '}
                                 <span className="text-[#C778DD]">Frappe ERPNext Expert</span>
-                            </h2>
+                            </h1>
                             <p className="text-[#ABB2BF] mb-6 lg:max-w-[460px]">
                                 Building intelligent, scalable full-stack enterprise solutions
                                 that transform complex business challenges into seamless,

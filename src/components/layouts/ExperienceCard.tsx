@@ -15,9 +15,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <div className="experience-svg">{icon}</div>
 
             <div className="experience-item-content flex flex-col gap-1 items-start">
-                <h6 className="year text-white font-semibold">{year}</h6>
-                <h3 className="heading text-xl text-[#C778DD] font-bold">{position}</h3>
-                <h4 className="sub-heading text-white font-medium">{company}</h4>
+                <p className="year text-white font-semibold">{year}</p>
+                <h4 className="heading text-xl text-[#C778DD] font-bold">{position}</h4>
+                <h5 className="sub-heading text-white font-medium">{company}</h5>
 
                 {image && (
                     <a href={link} target="_blank" rel="noreferrer" title={company}>

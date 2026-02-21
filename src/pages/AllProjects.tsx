@@ -17,7 +17,7 @@ const AllProjects = () => {
                 activeSection=""
             />
 
-            <div className="container-1 pt-32">
+            <main className="container-1 pt-32">
                 <div className="all-project-container mt-8 lg:mt-20 py-8 md:py-12 lg:py-16">
                     <div className="">
                         <div
@@ -56,7 +56,7 @@ const AllProjects = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     );
 };

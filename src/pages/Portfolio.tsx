@@ -56,12 +56,14 @@ const Portfolio = () => {
                 activeSection={section || ''}
             />
 
-            <Home />
-            <About />
-            <Resume />
-            <Skills />
-            <Projects />
-            <Contact />
+            <main>
+                <Home />
+                <About />
+                <Resume />
+                <Skills />
+                <Projects />
+                <Contact />
+            </main>
         </div>
     );
 };
