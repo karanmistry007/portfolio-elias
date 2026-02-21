@@ -120,9 +120,9 @@ const Navbar: React.FC<NavbarProps> = ({
                     {/* Navigation Links Dropdown */}
                     <div
                         className={`absolute lg:relative top-[72px] lg:top-0 left-0 w-full lg:w-auto bg-[#282C33] lg:bg-transparent transition-all duration-300 ease-in-out transform origin-top lg:transform-none lg:opacity-100 lg:scale-y-100 lg:flex ${isNavbarOpen
-                            ? 'scale-y-100 opacity-100 pointer-events-auto h-[calc(100vh-72px)] lg:h-auto z-40'
+                            ? 'flex scale-y-100 opacity-100 pointer-events-auto h-[calc(100dvh-72px)] lg:h-auto z-40 justify-between py-12'
                             : 'scale-y-0 opacity-0 pointer-events-none lg:pointer-events-auto h-0 lg:h-auto lg:overflow-visible overflow-hidden'
-                            } nav-links text-4xl lg:text-[16px] flex-col gap-8 justify-center items-center lg:items-start`}
+                            } nav-links text-4xl lg:text-[16px] flex-col gap-8 items-center lg:items-start`}
                     >
                         <ul className={`flex flex-col lg:flex-row gap-9 lg:items-center ${isNavbarOpen && 'container-1'}`}>
                             {navLinks.map((data, index) => (
@@ -141,7 +141,7 @@ const Navbar: React.FC<NavbarProps> = ({
                         </ul>
 
                         {/* Mobile Social Links */}
-                        <div className="flex lg:hidden flex-row gap-6 justify-center items-center mt-4 pb-8">
+                        <div className="flex lg:hidden flex-row gap-6 justify-center items-center mt-auto pb-8">
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}
