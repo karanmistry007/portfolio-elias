@@ -1,13 +1,21 @@
 import BannerImage from '../assets/images/banner_image.png';
 import QuoteImage from '../assets/icons/quote.svg';
 import { Button } from '../components/ui';
+import { useScrollAnimation } from '../hooks';
 
 // ─── Component ───────────────────────────────────────────────────────
 const Home = () => {
+    const bannerAnim = useScrollAnimation({ threshold: 0.1 });
+    const quoteAnim = useScrollAnimation({ threshold: 0.2 });
+
     return (
         <div className="container-1" id="home">
             {/* Banner Section */}
-            <div className="banner-container mt-8 lg:mt-20 py-8 md:py-12 lg:py-16">
+            <div
+                ref={bannerAnim.ref}
+                className={`banner-container mt-8 lg:mt-20 py-8 md:py-12 lg:py-16 ${bannerAnim.isVisible ? 'animate-fade-in-up' : 'animate-hidden'
+                    }`}
+            >
                 <div className="banner flex flex-col lg:flex-row justify-between items-center gap-4">
                     {/* Banner Text */}
                     <div className="banner-text-container">
@@ -27,7 +35,6 @@ const Home = () => {
                         <Button
                             text="Contact me!!"
                             variant="outline"
-                            action={() => console.log('Contact Me!!')}
                         />
                     </div>
 
@@ -49,7 +56,11 @@ const Home = () => {
             </div>
 
             {/* Quote Section */}
-            <div className="quote-container py-8 md:py-12 lg:py-16 relative">
+            <div
+                ref={quoteAnim.ref}
+                className={`quote-container py-8 md:py-12 lg:py-16 relative ${quoteAnim.isVisible ? 'animate-scale-in' : 'animate-hidden'
+                    }`}
+            >
                 <div className="quote w-fit m-auto">
                     <div className="quote-text text-xl lg:text-2xl p-4 lg:p-8 font-medium border border-[#ABB2BF] w-fit ml-auto relative">
                         <p>

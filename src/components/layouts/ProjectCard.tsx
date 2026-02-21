@@ -9,20 +9,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     description,
     link,
 }) => {
-    const handleButtonClick = () => {
-        if (link) {
-            window.open(link, '_blank', 'noopener,noreferrer');
-        }
-    };
+    const handleButtonClick = link
+        ? () => window.open(link, '_blank', 'noopener,noreferrer')
+        : undefined;
 
     return (
-        <div className="project-card border border-[#ABB2BF] flex flex-col h-full group hover:border-[#C778DD] transition-colors duration-300">
+        <div className="project-card border border-[#ABB2BF] flex flex-col h-full hover-lift hover:border-[#C778DD] transition-colors duration-300">
             {/* Project Image */}
             <div className="project-image overflow-hidden">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-[200px] object-cover hover:scale-105 transition-transform duration-500"
                 />
             </div>
 

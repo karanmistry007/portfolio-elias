@@ -1,17 +1,31 @@
 import AboutImage from '../assets/images/about_image.png';
 import { Button, SectionH1 } from '../components/ui';
+import { useScrollAnimation } from '../hooks';
 
 // ─── Component ───────────────────────────────────────────────────────
 const About = () => {
+    const headingAnim = useScrollAnimation();
+    const contentAnim = useScrollAnimation({ threshold: 0.1 });
+    const imageAnim = useScrollAnimation({ threshold: 0.2 });
+
     return (
         <div className="container-1" id="about">
             <div className="about-container py-8 md:py-12 lg:py-16">
                 <div className="about flex flex-col lg:flex-row gap-12 lg:gap-24 justify-between items-center relative">
                     {/* About Content */}
                     <div className="about-content">
-                        <SectionH1 message="About" />
+                        <div
+                            ref={headingAnim.ref}
+                            className={headingAnim.isVisible ? 'animate-fade-in-up' : 'animate-hidden'}
+                        >
+                            <SectionH1 message="About" />
+                        </div>
 
-                        <div className="about-text text-[#ABB2BF] lg:max-w-[400px]">
+                        <div
+                            ref={contentAnim.ref}
+                            className={`about-text text-[#ABB2BF] lg:max-w-[400px] ${contentAnim.isVisible ? 'animate-fade-in-left' : 'animate-hidden'
+                                }`}
+                        >
                             <p className="mb-6">Hello, I'm Karan Mistry!</p>
                             <p className="mb-6">
                                 I am a lead Full Stack Frappe and ERPNext developer based in
@@ -30,13 +44,16 @@ const About = () => {
                             <Button
                                 text="Read More ->"
                                 variant="outline"
-                                action={() => console.log('Read More ->')}
                             />
                         </div>
                     </div>
 
                     {/* About Image */}
-                    <div className="about-image">
+                    <div
+                        ref={imageAnim.ref}
+                        className={`about-image ${imageAnim.isVisible ? 'animate-fade-in-right' : 'animate-hidden'
+                            }`}
+                    >
                         <img src={AboutImage} alt="Karan Mistry" className="w-full" />
                     </div>
                 </div>

@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import type { ButtonProps } from '../../types';
 
 // ─── Variant Styles ──────────────────────────────────────────────────
@@ -12,9 +14,13 @@ const VARIANT_STYLES = {
 
 // ─── Component ───────────────────────────────────────────────────────
 const Button: React.FC<ButtonProps> = ({ text, variant = 'outline', action }) => {
+    const navigate = useNavigate();
+
     const handleClick = (): void => {
         if (action) {
             action();
+        } else {
+            navigate('/coming-soon');
         }
     };
 
