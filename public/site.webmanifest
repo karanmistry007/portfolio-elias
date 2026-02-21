@@ -1,6 +1,14 @@
 {
   "name": "Karan Mistry",
   "short_name": "KaranMistry",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
   "theme_color": "#282C33",
   "background_color": "#282C33",
   "display": "standalone"
