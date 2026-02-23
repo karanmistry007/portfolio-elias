@@ -27,12 +27,10 @@ const About = () => {
                                 }`}
                         >
                             <p className="mb-6">
-                                With almost 3 years of experience, I am currently a Technical Lead and Full Stack Frappe/ERPNext developer based in
-                                Ahmedabad, India. I specialize in large-scale ERP technical design, system architecture, and building SaaS products that solve complex business challenges.
+                                A Technical Lead and Full Stack Frappe/ERPNext developer based in Ahmedabad, India with over 3 years of hands-on experience. I design large-scale ERP systems, build multi-tenant SaaS products, and architect solutions that simplify complex business operations into seamless digital workflows.
                             </p>
                             <p className="mb-6">
-                                My expertise spans across multi-server architecture, multi-tenant hosting, and remote DB configuration.
-                                Beyond core development, I actively lead development teams, optimize scaling with bench production and Docker, and handle pre-sales demos to deliver enterprise-grade digital experiences.
+                                I work across the full stack from multi-server infrastructure and remote DB replication to cloud integrations and production deployments. I also lead development teams, manage scaling with Frappe Bench and Docker, and deliver pre-sales demos that bridge the gap between business needs and technical solutions.
                             </p>
 
                             <Button

@@ -1,5 +1,5 @@
 import { useScrollAnimation } from '../hooks';
-import { Navbar, SectionH1 } from '../components/ui';
+import { Navbar, SectionH1, Footer } from '../components/ui';
 import { ProjectCard } from '../components/layouts';
 import { LOGO_TEXT, NAV_LINKS, SOCIAL_LINKS, PROJECT_DETAILS } from '../data';
 
@@ -57,6 +57,7 @@ const AllProjects = () => {
                     </div>
                 </div>
             </main>
+            <Footer />
         </div>
     );
 };

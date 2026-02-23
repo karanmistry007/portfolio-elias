@@ -28,18 +28,10 @@ const Contact = () => {
                                 }`}
                         >
                             <p className="mb-6">
-                                I am Karan Mistry, a Full Stack Developer focused on product
-                                development and enterprise solutions, currently working with
-                                Sanskar Technolab—one of the leading Frappe Certified Partners
-                                and ERPNext implementers in India. My vision is to turn complex
-                                business challenges into seamless, high-performance digital
-                                experiences.
+                                I'm Karan Mistry, a Technical Lead and Full Stack Frappe/ERPNext developer currently working with Sanskar Technolab — one of India's leading Frappe Certified Partners and ERPNext implementers. I specialize in turning complex business challenges into scalable, high-performance digital solutions.
                             </p>
                             <p>
-                                If you're seeking expert guidance for ERP implementation,
-                                deployments, custom product development, or enterprise software,
-                                Feel free to reach out. all contact details are provided below.
-                                Let's build your next successful solution together!
+                                Whether you need help with ERP implementation, multi-tenant SaaS deployment, custom product development, or enterprise architecture — I'd love to connect. Feel free to reach out using the details below. Let's build something great together!
                             </p>
                         </div>
                     </div>

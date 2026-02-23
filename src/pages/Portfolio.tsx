@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
-import { Navbar } from '../components/ui';
+import { Navbar, Footer } from '../components/ui';
 import { LOGO_TEXT, NAV_LINKS, SOCIAL_LINKS } from '../data';
 import About from './About';
 import Contact from './Contact';
@@ -64,6 +64,7 @@ const Portfolio = () => {
                 <Projects />
                 <Contact />
             </main>
+            <Footer />
         </div>
     );
 };
