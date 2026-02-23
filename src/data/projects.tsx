@@ -4,11 +4,11 @@ import TradingManagementImage from '../assets/images/trading_management.jpg';
 import RealEstateCRMImage from '../assets/images/real_estate.jpg';
 import PharmacyHealthcareImage from '../assets/images/pharmacy_erp.jpg';
 import MedicalHealthcareImage from '../assets/images/medical_telehealth.jpg';
-import InternalPMSImage from '../assets/images/internal_pms.jpg';
+import InternalSystemImage from '../assets/images/internal_system.jpg';
 import DairyTechERPImage from '../assets/images/dairy_tech.jpg';
-import ChartOfAccountsImage from '../assets/images/saas_deployment.jpg';
-import POSImage from '../assets/images/retail_pos.jpg';
-import WhatsAppImage from '../assets/images/whatsapp_integration.jpg';
+import SaasDeploymentImage from '../assets/images/saas_deployment.jpg';
+import RetailPOSImage from '../assets/images/retail_pos.jpg';
+import IntegrationsImage from '../assets/images/integrations.jpg';
 
 // ─── Project Details ─────────────────────────────────────────────────
 export const PROJECT_DETAILS: ProjectDetail[] = [
@@ -17,7 +17,7 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
         title: 'Dairy Tech ERP',
         techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs', 'Mobile API', 'Azure Blob', 'DB Replication'],
         description:
-            'Led enterprise architecture for a dairy tech ecosystem. Managed remote DB replication, Azure integration, and mobile APIs alongside automated contract and customer billing portals.',
+            'Built and managed a multi-tenant dairy-tech ERP across multiple servers. Handled server setup, updates, maintenance, and GitHub repo management. Set up remote database replication, Azure storage, and mobile APIs. Developed automated contract workflows and customer billing portals.',
     },
     {
         image: MedicalHealthcareImage,
@@ -46,14 +46,14 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
             'Multi-tenant SaaS ERP for multi-facility healthcare networks. Engineered high-volume prescription handling, complex multi-branch billing, and synchronized legacy SOAP medical databases.',
     },
     {
-        image: POSImage,
+        image: RetailPOSImage,
         title: 'Healthcare POS & Retail ERP',
         techStack: ['ERPNext', 'Frappe', 'Python', 'Astro.js', 'JavaScript', 'MariaDB', 'PWA'],
         description:
             'Custom healthcare POS for retail and wholesale. Added live inventory/stock-taking, batch-wise barcodes, cashier expense management, and wholesale-wise ledgers. Features extreme keyboard optimization, extensive reporting, and a PWA delivery app.',
     },
     {
-        image: ChartOfAccountsImage,
+        image: SaasDeploymentImage,
         title: 'Automated SaaS Deployment & CoA',
         techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'Docker', 'Kubernetes'],
         description:
@@ -74,14 +74,14 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
             'End-to-end trading ERP covering lifecycle from buying to stock movement. Features real-time dashboards, custom doctypes, and seamless API integration with Astro.js frontends.',
     },
     {
-        image: InternalPMSImage,
+        image: InternalSystemImage,
         title: 'Internal System (PMS & CRM)',
         techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs'],
         description:
             'Comprehensive Frappe CRM and PMS implementation. Crafted custom lead workflows, resource allocation logic, and a real-time floating screen timer for multi-task timesheet tracking.',
     },
     {
-        image: WhatsAppImage,
+        image: IntegrationsImage,
         title: 'WhatsApp, Facebook, Instagram Integrations',
         techStack: [
             'ERPNext',
