@@ -2,12 +2,17 @@ import { Button, SectionH1, SectionH2 } from '../components/ui';
 import { EducationCard, ExperienceCard } from '../components/layouts';
 import { EDUCATION_DATA, EXPERIENCE_DATA } from '../data';
 import { useScrollAnimation } from '../hooks';
+import ResumePdf from '../assets/documents/Karan Mistry Resume Technical Lead & Full-Stack Frappe_ERPNext Developer.pdf';
 
 // ─── Component ───────────────────────────────────────────────────────
 const Resume = () => {
     const headingAnim = useScrollAnimation();
     const educationAnim = useScrollAnimation({ threshold: 0.05 });
     const experienceAnim = useScrollAnimation({ threshold: 0.05 });
+
+    const handleResumeOpen = (): void => {
+        window.open(ResumePdf, '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <div className="container-1" id="resume">
@@ -45,7 +50,7 @@ const Resume = () => {
                         </div>
 
                         <div className="download-button mt-6">
-                            <Button text="Download Resume ->" variant="outline" />
+                            <Button text="Download Resume ->" variant="outline" onClick={handleResumeOpen} />
                         </div>
                     </div>
 
