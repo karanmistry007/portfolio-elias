@@ -13,6 +13,13 @@ import IntegrationsImage from '../assets/images/integrations.jpg';
 // ─── Project Details ─────────────────────────────────────────────────
 export const PROJECT_DETAILS: ProjectDetail[] = [
     {
+        image: InternalSystemImage,
+        title: 'Internal Business OS & Process Maturity Model',
+        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'Frappe Insights', 'PMM'],
+        description:
+            'End-to-end internal business OS running Sales, Delivery, and Support on Frappe/ERPNext. Custom PMS, CRM, and HRMS apps with shared fixtures for upgrade-safe deployment. Layered with a Process Maturity Model — 9 live metrics, 12 process templates, weekly RCA reviews, and Frappe Insights dashboards powering every leadership decision.',
+    },
+    {
         image: DairyTechERPImage,
         title: 'Dairy Tech ERP',
         techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs', 'Mobile API', 'Azure Blob', 'DB Replication'],
@@ -72,13 +79,6 @@ export const PROJECT_DETAILS: ProjectDetail[] = [
         techStack: ['ERPNext', 'Frappe', 'Python', 'Astro.js', 'JavaScript', 'MariaDB'],
         description:
             'End-to-end trading ERP covering lifecycle from buying to stock movement. Features real-time dashboards, custom doctypes, and seamless API integration with Astro.js frontends.',
-    },
-    {
-        image: InternalSystemImage,
-        title: 'Internal System (PMS & CRM)',
-        techStack: ['ERPNext', 'Frappe', 'Python', 'JavaScript', 'MariaDB', 'REST APIs'],
-        description:
-            'Comprehensive Frappe CRM and PMS implementation. Crafted custom lead workflows, resource allocation logic, and a real-time floating screen timer for multi-task timesheet tracking.',
     },
     {
         image: IntegrationsImage,
