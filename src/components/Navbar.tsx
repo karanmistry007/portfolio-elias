@@ -76,7 +76,7 @@ const Navbar = () => {
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="font-display font-semibold text-lg tracking-tight cursor-pointer"
                     >
-                        KM<span className="text-violet">©</span>
+                        KM
                     </button>
 
                     {/* Desktop links */}
