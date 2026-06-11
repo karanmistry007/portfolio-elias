@@ -1,71 +1,63 @@
-import { useEffect, useRef } from 'react';
-import { useNavigate, useParams } from 'react-router';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { MotionConfig } from 'motion/react';
 
-import { Navbar, Footer } from '../components/ui';
-import { LOGO_TEXT, NAV_LINKS, SOCIAL_LINKS } from '../data';
-import About from './About';
-import Contact from './Contact';
-import Home from './Home';
-import Projects from './Projects';
-import Resume from './Resume';
-import Skills from './Skills';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import SmoothScroll from '../components/SmoothScroll';
+import { Marquee } from '../components/ui';
+import Hero from '../components/sections/Hero';
+import Statement from '../components/sections/Statement';
+import About from '../components/sections/About';
+import Experience from '../components/sections/Experience';
+import Skills from '../components/sections/Skills';
+import Projects from '../components/sections/Projects';
+import Contact from '../components/sections/Contact';
 
-// ─── Section IDs ─────────────────────────────────────────────────────
-const SECTION_IDS = ['', 'about', 'resume', 'skills', 'projects', 'contact'];
+// Keywords pulled from the skills data for the hero marquee
+const MARQUEE_ITEMS = [
+    'ERPNext',
+    'Frappe',
+    'Python',
+    'React',
+    'Docker',
+    'Kubernetes',
+    'Multi-Tenant SaaS',
+    'PostgreSQL',
+    'MariaDB',
+    'System Design',
+];
 
-// ─── Component ───────────────────────────────────────────────────────
+// ─── Portfolio (single page) ─────────────────────────────────────────
 const Portfolio = () => {
     const { section } = useParams<{ section?: string }>();
-    const navigate = useNavigate();
-    const isScrollingToSectionRef = useRef<boolean>(false);
 
-    // ─── Detect Active Section on Scroll ─────────────────────────────
+    // Deep links like /work or /contact scroll to their section on load
     useEffect(() => {
-        const handleScroll = (): void => {
-            if (isScrollingToSectionRef.current) return;
+        if (!section) return;
+        const el = document.getElementById(section);
+        if (el) el.scrollIntoView({ behavior: 'auto' });
+    }, [section]);
 
-            let currentSection = '';
-
-            for (const sectionId of SECTION_IDS) {
-                const element = document.getElementById(sectionId);
-                if (
-                    element &&
-                    element.getBoundingClientRect().top < window.innerHeight * 0.5
-                ) {
-                    currentSection = sectionId;
-                }
-            }
-
-            const currentPath = window.location.pathname.replace('/', '') || '';
-            if (currentSection !== currentPath && currentSection !== section) {
-                navigate(`/${currentSection}`, { replace: true });
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [section, navigate]);
-
-    // ─── Render ──────────────────────────────────────────────────────
     return (
-        <div className="portfolio">
-            <Navbar
-                logoText={LOGO_TEXT}
-                navLinks={NAV_LINKS}
-                socialLinks={SOCIAL_LINKS}
-                activeSection={section || ''}
-            />
-
-            <main>
-                <Home />
-                <About />
-                <Resume />
-                <Skills />
-                <Projects />
-                <Contact />
-            </main>
-            <Footer />
-        </div>
+        <MotionConfig reducedMotion="user">
+            <SmoothScroll>
+                <div className="grain">
+                    <Navbar />
+                    <main>
+                        <Hero />
+                        <Marquee items={MARQUEE_ITEMS} />
+                        <Statement />
+                        <About />
+                        <Experience />
+                        <Skills />
+                        <Projects />
+                        <Contact />
+                    </main>
+                    <Footer />
+                </div>
+            </SmoothScroll>
+        </MotionConfig>
     );
 };
 
