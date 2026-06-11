@@ -42,7 +42,7 @@ const Portfolio = () => {
     return (
         <MotionConfig reducedMotion="user">
             <SmoothScroll>
-                <div className="grain">
+                <div>
                     <Navbar />
                     <main>
                         <Hero />

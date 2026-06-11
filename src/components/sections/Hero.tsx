@@ -118,7 +118,7 @@ const Hero = () => {
                 >
                     <span className="h-2 w-2 rounded-full bg-violet animate-pulse-dot" />
                     <span className="font-mono text-xs text-fog">
-                        Currently working on Portfolio
+                        Building systems that businesses run on
                     </span>
                 </motion.div>
             </motion.div>
