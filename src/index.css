@@ -1,191 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import "tailwindcss";
 
+/* ─── Obsidian Editorial Design Tokens ──────────────────────────────── */
+@theme {
+  --color-ink: #0a0a0f;
+  --color-surface: #12121a;
+  --color-elev: #1a1a26;
+  --color-line: rgba(237, 237, 242, 0.08);
+  --color-snow: #ededf2;
+  --color-fog: #8e8ea3;
+  --color-violet: #c778dd;
+  --color-iris: #a78bfa;
+
+  --font-display: "Clash Display", "Inter", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 rgba(199, 120, 221, 0.5);
+    }
+    50% {
+      opacity: 0.6;
+      box-shadow: 0 0 0 6px rgba(199, 120, 221, 0);
+    }
+  }
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: auto;
+}
+
 body {
-  background-color: #282C33;
-  color: #ffffff;
-  font-family: "Fira Code", monospace;
+  background-color: var(--color-ink);
+  color: var(--color-snow);
+  font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ─── Scroll Reveal Animations ──────────────────────────────────────── */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+::selection {
+  background-color: var(--color-violet);
+  color: var(--color-ink);
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a38;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a4c;
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* ─── Utilities ─────────────────────────────────────────────────────── */
+
+/* Film-grain overlay for depth — pure CSS, no asset */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.text-gradient-violet {
+  background: linear-gradient(120deg, #a78bfa 0%, #c778dd 55%, #e0a9f0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+/* Animated link underline */
+.link-underline {
+  position: relative;
 }
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ─── Animation Utility Classes ─────────────────────────────────────── */
-
-.animate-hidden {
-  opacity: 0;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-fade-in-left {
-  animation: fadeInLeft 0.6s ease-out forwards;
-}
-
-.animate-fade-in-right {
-  animation: fadeInRight 0.6s ease-out forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.5s ease-out forwards;
-}
-
-.animate-slide-in-up {
-  animation: slideInUp 0.7s ease-out forwards;
-}
-
-/* ─── Stagger Delays for Card Grids ─────────────────────────────────── */
-
-.stagger-1 { animation-delay: 0ms; }
-.stagger-2 { animation-delay: 100ms; }
-.stagger-3 { animation-delay: 200ms; }
-.stagger-4 { animation-delay: 300ms; }
-.stagger-5 { animation-delay: 400ms; }
-.stagger-6 { animation-delay: 500ms; }
-
-/* ─── Hover Effects ─────────────────────────────────────────────────── */
-
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(199, 120, 221, 0.15);
-}
-
-.hover-glow {
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.hover-glow:hover {
-  box-shadow: 0 0 15px rgba(199, 120, 221, 0.2);
-}
-
-/* ─── Section Heading Animation ─────────────────────────────────────── */
-
-.section-heading-h1 .purple-line,
-.section-heading-h2 .purple-line {
-  transform-origin: left;
-  transition: transform 0.8s ease-out;
-}
-
-.animate-hidden .purple-line {
-  transform: scaleX(0);
-}
-
-.animate-fade-in-up .purple-line,
-.animate-fade-in-left .purple-line {
-  transform: scaleX(1);
-}
-
-/* ─── Container ─────────────────────────────────────────────────────── */
-
-.container-1 {
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
   width: 100%;
-  max-width: 1336px;
-  margin: 0 auto;
-  padding: 0 16px;
-  box-sizing: border-box;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-@media (min-width: 640px) {
-  .container-1 {
-    max-width: 610px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-1 {
-    max-width: 728px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-1 {
-    max-width: 920px;
-    padding: 0 20px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container-1 {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container-1 {
-    max-width: 1150px;
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
   }
 }

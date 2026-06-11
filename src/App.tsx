@@ -1,8 +1,6 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import Portfolio from './pages/Portfolio';
-import ComingSoon from './pages/ComingSoon';
-import AllProjects from './pages/AllProjects';
 
 // ─── App ─────────────────────────────────────────────────────────────
 function App() {
@@ -10,9 +8,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Portfolio />} />
-        <Route path="/all-projects" element={<AllProjects />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/all-projects" element={<Navigate to="/work" replace />} />
         <Route path="/:section" element={<Portfolio />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );
